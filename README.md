@@ -1,6 +1,6 @@
 # Rooted (Expo / React Native)
 
-A self-contained farmers-market style app: **consumer** experience (map, search, events, saved, profile) and a **producer** dashboard (analytics, inventory, markets, profile). This repository is only the `farmers-market-react-native` app—clone it as the project root and you have everything you need.
+A self-contained farmers-market style app: **consumer** experience (map, search, events, saved, profile) and a **producer** dashboard (analytics, inventory, markets, profile). The repo root **is** the Expo app (where `package.json` lives)—nothing else is required.
 
 ---
 
@@ -9,8 +9,14 @@ A self-contained farmers-market style app: **consumer** experience (map, search,
 1. **Install Node.js**  
    Use the current [LTS](https://nodejs.org/) (v20+ is a safe choice).
 
-2. **Clone and enter the folder**  
-   After cloning, your terminal’s current directory should be this project (where `package.json` lives).
+2. **Clone and enter the folder**
+
+   ```bash
+   git clone https://github.com/juu2n/Rooted-ios.git
+   cd Rooted-ios
+   ```
+
+   (If you cloned into a different directory name, `cd` into that folder instead.)
 
 3. **Install dependencies**
 
@@ -41,6 +47,17 @@ If the bundler shows a stale error, stop the server and run:
 ```bash
 npx expo start --clear
 ```
+
+### Check the project without a simulator
+
+From the same folder (after `npm install`):
+
+```bash
+npm run typecheck
+npm run lint:expo
+```
+
+Pushes to `main` also run these checks (and an iOS JS bundle) on [GitHub Actions](https://github.com/juu2n/Rooted-ios/actions).
 
 ---
 
